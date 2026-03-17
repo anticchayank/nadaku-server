@@ -29,11 +29,10 @@ app.get('/stream', (req, res) => {
   // --no-playlist                     → single video only
   // --extractor-args youtube:skip=dash,hls  → use standard streams
   const args = [
-    '-f', 'bestaudio[ext=m4a]/bestaudio[ext=webm]/bestaudio',
+    '-f', 'bestaudio/best',
     '--get-url',
     '--no-playlist',
     '--no-warnings',
-    '--extractor-args', 'youtube:player_client=android,web',
     ytUrl
   ];
 
